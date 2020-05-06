@@ -1,0 +1,36 @@
+(base) matthew@afternoon:~$ nvidia-smi
+Thu May  7 00:27:47 2020       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.82       Driver Version: 440.82       CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  GeForce GTX 1050    Off  | 00000000:01:00.0  On |                  N/A |
+|  0%   45C    P8    N/A / 120W |    596MiB /  1999MiB |      1%      Default |
++-------------------------------+----------------------+----------------------+
+|   1  GeForce GT 730      Off  | 00000000:05:00.0 N/A |                  N/A |
+| 33%   31C    P8    N/A /  N/A |      1MiB /  2002MiB |     N/A      Default |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|    0       906      G   /usr/lib/xorg/Xorg                            40MiB |
+|    0       986      G   /usr/bin/gnome-shell                          45MiB |
+|    0      1257      G   /usr/lib/xorg/Xorg                           307MiB |
+|    0      1400      G   /usr/bin/gnome-shell                         127MiB |
+|    0      1868      G   ...AAAAAAAAAAAACAAAAAAAAAA= --shared-files    67MiB |
+|    0      2112      G   gnome-control-center                           1MiB |
+|    1                    Not Supported                                       |
++-----------------------------------------------------------------------------+
+(base) matthew@afternoon:~$ 
+
+
+01:00.0 VGA compatible controller: NVIDIA Corporation GP107 [GeForce GTX 1050] (rev a1)
+	Subsystem: Gigabyte Technology Co., Ltd GP107 [GeForce GTX 1050]
+--
+05:00.0 VGA compatible controller: NVIDIA Corporation GK208 [GeForce GT 730] (rev a1)
+	Subsystem: Gigabyte Technology Co., Ltd GK208B [GeForce GT 730]
+

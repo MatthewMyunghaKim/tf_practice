@@ -1,0 +1,54 @@
+(tf) matthew@afternoon:/design/practice$ python lab2_1.py 
+2020-05-07 00:04:17.588909: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2020-05-07 00:04:17.676161: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-07 00:04:17.676419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.506
+pciBusID: 0000:01:00.0
+totalMemory: 1.95GiB freeMemory: 184.88MiB
+2020-05-07 00:04:17.676442: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-05-07 00:04:18.014369: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-07 00:04:18.014409: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-05-07 00:04:18.014420: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-05-07 00:04:18.014539: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 120 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2020-05-07 00:04:18.034449: E tensorflow/stream_executor/cuda/cuda_driver.cc:806] failed to allocate 120.88M (126746624 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+2020-05-07 00:04:18.035006: E tensorflow/stream_executor/cuda/cuda_driver.cc:806] failed to allocate 108.79M (114072064 bytes) from device: CUDA_ERROR_OUT_OF_MEMORY: out of memory
+0 26.862127 [0.23391603] [-1.652981]
+20 0.9242142 [1.6070641] [-1.1027869]
+40 0.8068409 [1.5726305] [-0.9535942]
+60 0.7047976 [1.5345006] [-0.81582063]
+80 0.6156825 [1.498841] [-0.6870774]
+100 0.5378574 [1.4655166] [-0.5667657]
+120 0.46989226 [1.4343746] [-0.4543334]
+140 0.41053772 [1.4052721] [-0.34926426]
+160 0.358703 [1.3780756] [-0.25107622]
+180 0.31343538 [1.3526602] [-0.15931861]
+200 0.2739028 [1.3289094] [-0.07357027]
+220 0.23937878 [1.3067139] [0.00656227]
+240 0.20922866 [1.285972] [0.08144698]
+260 0.18289827 [1.2665886] [0.15142736]
+
+
+
+(tf) matthew@afternoon:/design/practice$ python lab2_1.py 
+2020-05-07 01:02:59.634076: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2020-05-07 01:02:59.735251: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-07 01:02:59.735662: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.506
+pciBusID: 0000:01:00.0
+totalMemory: 1.95GiB freeMemory: 1.90GiB
+2020-05-07 01:02:59.735685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-05-07 01:03:00.083164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-07 01:03:00.083203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-05-07 01:03:00.083217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-05-07 01:03:00.083335: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1658 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+0 1.0815132 [1.0979714] [-0.20192087]
+20 0.2632235 [1.3210739] [-0.04962801]
+40 0.23003833 [1.3004314] [0.0292246]
+60 0.20107166 [1.2801056] [0.10262632]
+80 0.17577478 [1.2611065] [0.17121968]
+100 0.15368271 [1.2433515] [0.23532079]
+120 0.13438962 [1.2267592] [0.29522383]
+140 0.11754091 [1.2112538] [0.35120374]
+160 0.102826715 [1.1967636] [0.40351757]
+180 0.08997665 [1.1832224] [0.45240536]
+
