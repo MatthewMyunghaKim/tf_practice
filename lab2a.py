@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[2]:
-
-
 import tensorflow as tf
 W = tf.Variable(tf.random_normal([1]), name='weight')
 b = tf.Variable(tf.random_normal([1]), name='bias')
@@ -29,11 +26,9 @@ for step in range(2001):
     if step % 20 == 0:
         print(step, cost_val, W_val, b_val)
 
-print(sess.run(hypothesis, feed_dict={X: [5]}))
-print(sess.run(hypothesis, feed_dict={X: [2.5]}))
-print(sess.run(hypothesis, feed_dict={X: [1.5, 3.5]}))
-# In[ ]:
-
-
+# Inference test
+print(sess.run(hypothesis, feed_dict={X: [5]}))         # expected 6.1
+print(sess.run(hypothesis, feed_dict={X: [2.5]}))       # expected 3.6
+print(sess.run(hypothesis, feed_dict={X: [1.5, 3.5]}))  # expected 2.6, 4.5
 
 
