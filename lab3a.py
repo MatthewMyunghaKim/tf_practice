@@ -28,7 +28,7 @@ sess.run(tf.global_variables_initializer())
 
 # Run
 for step in range(21):
-    sess.run(update, feed_dict={X: x_data, Y: y_data})
+    sess.run(update, feed_dict={X: x_data, Y: y_data})  # Execute "update"
     print(step, sess.run(cost, feed_dict={X: x_data, Y: y_data}), sess.run(W))
 
 print("Done")
