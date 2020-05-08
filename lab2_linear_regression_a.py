@@ -9,14 +9,17 @@ Y = tf.placeholder(tf.float32, shape=[None])
 
 # Our hypothesis XW+b
 hypothesis = X * W + b
+
 # cost/loss function
 cost = tf.reduce_mean(tf.square(hypothesis - Y))
+
 # Minimize
 optimizer = tf.train.GradientDescentOptimizer(learning_rate= 0.01)
 train = optimizer.minimize(cost)
 
 # Launch the graph in a session
 sess = tf.Session()
+
 # Initializes global variables in the graph.
 sess.run(tf.global_variables_initializer())
 
