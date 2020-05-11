@@ -1,0 +1,23 @@
+2020-05-11 13:21:12.386000: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2020-05-11 13:21:12.484342: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-11 13:21:12.484791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.506
+pciBusID: 0000:01:00.0
+totalMemory: 1.95GiB freeMemory: 1.90GiB
+2020-05-11 13:21:12.484813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-05-11 13:21:12.826071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-11 13:21:12.826118: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-05-11 13:21:12.826131: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-05-11 13:21:12.826237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1658 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+2020-05-11 13:21:12.841529: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-05-11 13:21:12.841598: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-11 13:21:12.841629: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-05-11 13:21:12.841655: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-05-11 13:21:12.841774: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1658 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+b'Hello, Tensorflow!'
+node1: Tensor("Const_1:0", shape=(), dtype=float32) node2: Tensor("Const_2:0", shape=(), dtype=float32)
+node3:  Tensor("Add:0", shape=(), dtype=float32)
+sess.run(node1, node2):  [3.0, 4.0]
+sess.run(node3):  7.0
+7.5
+[3. 7.]

@@ -1,0 +1,86 @@
+WARNING:tensorflow:From lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:3: string_input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(string_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:276: input_producer (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensor_slices(input_tensor).shuffle(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If `shuffle=False`, omit the `.shuffle(...)`.
+WARNING:tensorflow:From /opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:188: limit_epochs (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`.
+WARNING:tensorflow:From /opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:197: QueueRunner.__init__ (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From /opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py:197: add_queue_runner (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+WARNING:tensorflow:From lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:4: TextLineReader.__init__ (from tensorflow.python.ops.io_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.TextLineDataset`.
+WARNING:tensorflow:From lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:12: batch (from tensorflow.python.training.input) is deprecated and will be removed in a future version.
+Instructions for updating:
+Queue-based input pipelines have been replaced by `tf.data`. Use `tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if `dynamic_pad=True`).
+2020-05-11 13:25:25.247418: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2
+2020-05-11 13:25:25.353134: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-05-11 13:25:25.353544: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1050 major: 6 minor: 1 memoryClockRate(GHz): 1.506
+pciBusID: 0000:01:00.0
+totalMemory: 1.95GiB freeMemory: 1.90GiB
+2020-05-11 13:25:25.353566: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2020-05-11 13:25:25.693237: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-05-11 13:25:25.693282: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2020-05-11 13:25:25.693293: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2020-05-11 13:25:25.693400: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1658 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1050, pci bus id: 0000:01:00.0, compute capability: 6.1)
+WARNING:tensorflow:From lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:39: start_queue_runners (from tensorflow.python.training.queue_runner_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+To construct input pipelines, use the `tf.data` module.
+Traceback (most recent call last):
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.OutOfRangeError: FIFOQueue '_1_batch/fifo_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[{{node batch}} = QueueDequeueManyV2[component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/device:CPU:0"](batch/fifo_queue, batch/n)]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py", line 42, in <module>
+    x_batch, y_batch = sess.run([train_x_batch, train_y_batch])
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 929, in run
+    run_metadata_ptr)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1152, in _run
+    feed_dict_tensor, options, run_metadata)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1328, in _do_run
+    run_metadata)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1348, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.OutOfRangeError: FIFOQueue '_1_batch/fifo_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[node batch (defined at lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:12)  = QueueDequeueManyV2[component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/device:CPU:0"](batch/fifo_queue, batch/n)]]
+
+Caused by op 'batch', defined at:
+  File "lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py", line 12, in <module>
+    train_x_batch, train_y_batch = tf.train.batch([xy[0:-1], xy[-1:]], batch_size=10)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 306, in new_func
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py", line 1017, in batch
+    name=name)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/training/input.py", line 787, in _batch
+    dequeued = queue.dequeue_many(batch_size, name=name)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/ops/data_flow_ops.py", line 478, in dequeue_many
+    self._queue_ref, n=n, component_types=self._dtypes, name=name)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/ops/gen_data_flow_ops.py", line 3487, in queue_dequeue_many_v2
+    component_types=component_types, timeout_ms=timeout_ms, name=name)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 787, in _apply_op_helper
+    op_def=op_def)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/util/deprecation.py", line 488, in new_func
+    return func(*args, **kwargs)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 3274, in create_op
+    op_def=op_def)
+  File "/opt/anaconda3/envs/tf/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1770, in __init__
+    self._traceback = tf_stack.extract_stack()
+
+OutOfRangeError (see above for traceback): FIFOQueue '_1_batch/fifo_queue' is closed and has insufficient elements (requested 10, current size 0)
+	 [[node batch (defined at lab4_multi_variable_linear_regression_e_matrix_loading_data_from_file.py:12)  = QueueDequeueManyV2[component_types=[DT_FLOAT, DT_FLOAT], timeout_ms=-1, _device="/job:localhost/replica:0/task:0/device:CPU:0"](batch/fifo_queue, batch/n)]]
+
